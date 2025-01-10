@@ -1,0 +1,92 @@
+\babel@toc {german}{}\relax 
+\contentsline {chapter}{\numberline {1}Intro to Cyber Defense}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lecture}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Lecture}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Exercise}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Lecture}{5}{subsection.1.2.1}%
+\contentsline {chapter}{\numberline {2}Hacker Attacks}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lecture}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Attack Methologies}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}APT - Advanced Persistent threats}{7}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Exercise}{15}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Metasploit \cite {ivanbuetler}}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}lecture}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}General Exploitation techniques}{17}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Local exploit}{17}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Server-side exploit}{17}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Client-side exploit}{18}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Command \& Control (C2, C\&C)}{18}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Metasploit}{20}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Metasploit Meterpreter}{20}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Vulnerability Attacks}{21}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Secure architecture}{24}{subsection.3.1.9}%
+\contentsline {section}{\numberline {3.2}exercise}{27}{section.3.2}%
+\contentsline {chapter}{\numberline {4}APT, Logging and Forensic}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}lecture}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Advanced Persistent Threat (APT)}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Logging}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Cyber Security tools and frameworks for logging and forensic}{31}{subsection.4.1.3}%
+\contentsline {subsubsection}{Interaction SIEM, EDR, SOAR}{32}{section*.9}%
+\contentsline {subsection}{\numberline {4.1.4}Velociraptor}{33}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}YARA}{33}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}CIRT/CSIRT}{34}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Incident Response}{34}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2}exercise}{36}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Windows Event Logs}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}lecture}{38}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Introduction}{38}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Log Categories}{38}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Getting Logs}{39}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}exercise}{39}{section.5.2}%
+\contentsline {subsubsection}{Deleting Event Logs}{39}{section*.27}%
+\contentsline {subsection}{\numberline {5.2.1}Domain Controller Events}{43}{subsection.5.2.1}%
+\contentsline {subsubsection}{NTLM authentication}{43}{section*.43}%
+\contentsline {subsubsection}{Kerberos authentication}{44}{section*.45}%
+\contentsline {subsection}{\numberline {5.2.2}Automated Analysis Tools}{46}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}exercise}{46}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Enterprise Response Tooling}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Velociraptor}{48}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Core Capabilities}{48}{subsection.6.1.1}%
+\contentsline {subsubsection}{Endpoint Monitoring}{48}{section*.56}%
+\contentsline {subsection}{\numberline {6.1.2}Technical Features}{48}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Architecture}{48}{subsection.6.1.3}%
+\contentsline {subsubsection}{Client-Server Model}{48}{section*.57}%
+\contentsline {section}{\numberline {6.2}Use Cases}{48}{section.6.2}%
+\contentsline {section}{\numberline {6.3}VQL Example}{48}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}User Interface Basics}{49}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Velociraptor Artifacts}{51}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Velociratpro Hunts}{51}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Active Containment}{54}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Collecting Files}{55}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Notebooks}{57}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Velociraptor Query Language}{58}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}YARA in Velociraptor}{60}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Logs}{61}{subsection.6.3.9}%
+\contentsline {section}{\numberline {6.4}exercise}{62}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Chapter title}{63}{chapter.7}%
+\contentsline {section}{\numberline {7.1}lecture}{64}{section.7.1}%
+\contentsline {section}{\numberline {7.2}exercise}{64}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Chapter title}{65}{chapter.8}%
+\contentsline {section}{\numberline {8.1}lecture}{66}{section.8.1}%
+\contentsline {section}{\numberline {8.2}exercise}{66}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Chapter title}{67}{chapter.9}%
+\contentsline {section}{\numberline {9.1}lecture}{68}{section.9.1}%
+\contentsline {section}{\numberline {9.2}exercise}{68}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Chapter title}{69}{chapter.10}%
+\contentsline {section}{\numberline {10.1}lecture}{70}{section.10.1}%
+\contentsline {section}{\numberline {10.2}exercise}{70}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Chapter title}{71}{chapter.11}%
+\contentsline {section}{\numberline {11.1}lecture}{72}{section.11.1}%
+\contentsline {section}{\numberline {11.2}exercise}{72}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Chapter title}{73}{chapter.12}%
+\contentsline {section}{\numberline {12.1}lecture}{74}{section.12.1}%
+\contentsline {section}{\numberline {12.2}exercise}{74}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Chapter title}{75}{chapter.13}%
+\contentsline {section}{\numberline {13.1}lecture}{76}{section.13.1}%
+\contentsline {section}{\numberline {13.2}exercise}{76}{section.13.2}%
+\contentsline {chapter}{\numberline {14}Chapter title}{77}{chapter.14}%
+\contentsline {section}{\numberline {14.1}lecture}{78}{section.14.1}%
+\contentsline {section}{\numberline {14.2}exercise}{78}{section.14.2}%
+\contentsline {chapter}{\numberline {15}Attack Pattern, Techniques and Prevention Methods}{79}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Attacks}{80}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Common Attack Techinques}{80}{subsection.15.1.1}%

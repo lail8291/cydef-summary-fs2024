@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+    <!-- Background zones -->
+    <rect x="50" y="20" width="150" height="260" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
+    <rect x="250" y="20" width="150" height="260" fill="#ffe4e1" stroke="#666" stroke-width="1"/>
+    <rect x="450" y="20" width="150" height="260" fill="#e0ffe0" stroke="#666" stroke-width="1"/>
+    <rect x="650" y="20" width="150" height="260" fill="#e0e0ff" stroke="#666" stroke-width="1"/>
+    
+    <!-- Zone labels -->
+    <text x="80" y="50" font-family="Arial" font-size="14">Internet</text>
+    <text x="280" y="50" font-family="Arial" font-size="14">DMZ</text>
+    <text x="470" y="50" font-family="Arial" font-size="14">App Zone</text>
+    <text x="670" y="50" font-family="Arial" font-size="14">DB Zone</text>
+
+    <!-- Services and ports -->
+    <rect x="270" y="100" width="100" height="40" fill="white" stroke="black"/>
+    <text x="290" y="125" font-family="Arial" font-size="12">WAF :443</text>
+
+    <rect x="470" y="100" width="100" height="40" fill="white" stroke="black"/>
+    <text x="485" y="125" font-family="Arial" font-size="12">App :8080</text>
+
+    <rect x="670" y="100" width="100" height="40" fill="white" stroke="black"/>
+    <text x="690" y="125" font-family="Arial" font-size="12">DB :1433</text>
+
+    <!-- Attack paths (red) -->
+    <path d="M 200 120 H 270" stroke="red" stroke-width="2" fill="none"/>
+    <path d="M 370 120 H 470" stroke="red" stroke-width="2" fill="none"/>
+    <path d="M 570 120 H 670" stroke="red" stroke-width="2" fill="none"/>
+
+    <!-- Legitimate traffic (green) -->
+    <path d="M 200 150 H 270" stroke="green" stroke-width="1" fill="none"/>
+    <path d="M 370 150 H 470" stroke="green" stroke-width="1" fill="none"/>
+    <path d="M 570 150 H 670" stroke="green" stroke-width="1" fill="none"/>
+
+    <!-- Port hopping labels -->
+    <text x="200" y="100" font-family="Arial" font-size="10" fill="red">Port Hop 443</text>
+    <text x="400" y="100" font-family="Arial" font-size="10" fill="red">Port Hop 8080</text>
+    <text x="600" y="100" font-family="Arial" font-size="10" fill="red">Port Hop 1433</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Internet/External Zone -->
+  <rect x="50" y="50" width="100" height="300" fill="#f0f0f0" stroke="#000"/>
+  <text x="70" y="100">Internet</text>
+  
+  <!-- DMZ -->
+  <rect x="250" y="50" width="100" height="300" fill="#ffe4e1" stroke="#000"/>
+  <text x="270" y="100">DMZ</text>
+  
+  <!-- Application Zone -->
+  <rect x="450" y="50" width="100" height="300" fill="#e0ffe0" stroke="#000"/>
+  <text x="460" y="100">App Zone</text>
+  
+  <!-- Database Zone -->
+  <rect x="650" y="50" width="100" height="300" fill="#e0e0ff" stroke="#000"/>
+  <text x="660" y="100">DB Zone</text>
+  
+  <!-- Components -->
+  <rect x="260" y="150" width="80" height="40" fill="#fff" stroke="#000"/>
+  <text x="275" y="175">WAF</text>
+  
+  <rect x="460" y="150" width="80" height="40" fill="#fff" stroke="#000"/>
+  <text x="475" y="175">App</text>
+  
+  <rect x="660" y="150" width="80" height="40" fill="#fff" stroke="#000"/>
+  <text x="675" y="175">DB</text>
+  
+  <!-- Attack Paths -->
+  <path d="M 150 170 H 250" stroke="red" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 350 170 H 450" stroke="red" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 550 170 H 650" stroke="red" fill="none" stroke-dasharray="5,5"/>
+  
+  <!-- Normal Traffic -->
+  <path d="M 150 200 H 250" stroke="green" fill="none"/>
+  <path d="M 350 200 H 450" stroke="green" fill="none"/>
+  <path d="M 550 200 H 650" stroke="green" fill="none"/>
+</svg>

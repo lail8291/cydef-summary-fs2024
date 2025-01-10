@@ -1,0 +1,50 @@
+% 02_custom.tex - Package imports and document setup
+%\documentclass[8pt]{article}
+\documentclass[a4paper, 8pt]{report}
+\input{02_custom}  % Import custom packages
+
+\begin{document}
+\title{Subject 2024 Summary}
+\author{Roman Cvijanovic}
+\date{\today}
+\maketitle
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\large\textbf{Acknowledgment} \\
+\end{center}
+\vspace{1em}
+\begin{center}
+\noindent
+something Something Acknowledgment \\
+\vspace{1em}
+\noindent
+Transcription and enhancements by Roman Cvijanovic. \\
+\end{center}
+\vspace*{\fill}
+\newpage
+
+\tableofcontents
+\newpage
+
+% Include all weekly summaries
+\input{summaries/week01}
+\input{summaries/week02}
+\input{summaries/week03}
+\input{summaries/week04}
+\input{summaries/week05}
+\input{summaries/week06}
+\input{summaries/week07}
+\input{summaries/week08}
+\input{summaries/week09}
+\input{summaries/week10}
+\input{summaries/week11}
+\input{summaries/week12}
+\input{summaries/week13}
+\input{summaries/week14}
+\input{summaries/week15}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
