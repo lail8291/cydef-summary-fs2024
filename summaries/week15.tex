@@ -65,3 +65,48 @@
 %\begin{itemize}
 %    \item Velociraptor
 %\end{itemize}
+\subsection{Prevention Techniques}
+\subsubsection{HSTS:}
+HSTS (HTTP Strict Transport Security) is a web security policy mechanism that helps protect websites against protocol downgrade attacks and cookie hijacking. Here's a detailed explanation:
+
+\textbf{Basic Concept}
+
+HSTS is a security header that forces web browsers to only interact with a website using secure HTTPS connections, automatically rejecting any HTTP connections. Once a browser receives the HSTS policy from a website, it will enforce this secure connection requirement for a specified period.
+
+\textbf{How It Works}
+\begin{itemize}
+    \item Website sends HSTS header in its HTTPS response
+    \item Header contains max-age directive (how long to enforce HTTPS)
+    \item Browser stores this information
+    \item All future requests are automatically upgraded to HTTPS
+    \item Blocks access attempts over insecure HTTP
+\end{itemize}
+
+\textbf{Example Header}
+```
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+```
+- max-age: Duration in seconds to remember the HSTS policy
+- includeSubDomains: Apply to all subdomains
+- preload: Include in browser's preload list
+
+\textbf{Key Benefits}
+\begin{itemize}
+    \item Prevents SSL stripping attacks
+    \item Blocks protocol downgrade attempts
+    \item Protects against cookie hijacking
+    \item Eliminates user exposure to HTTP
+    \item Reduces risk of MITM attacks
+\end{itemize}
+
+\textbf{HSTS Preloading}
+
+An additional security measure where domains are hardcoded into browsers as HTTPS-only:
+\begin{itemize}
+    \item Domains submit to browser preload lists
+    \item Browser enforces HTTPS before first contact
+    \item Provides protection on first visit
+    \item Permanent until removed from preload list
+\end{itemize}
+
+Would you like me to elaborate on any of these aspects or explain how to implement HSTS in different web servers?
