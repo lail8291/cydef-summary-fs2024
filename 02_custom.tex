@@ -58,6 +58,18 @@
     showstringspaces=false
 }
 
+\lstdefinelanguage{YARA}{
+  keywords={rule, meta, strings, condition, private, global, ascii, wide, nocase, fullword, true, false, and, or, not, all, any, of, at, in, them},
+  keywordstyle=\color{blue}\bfseries,
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{darkgreen},
+  string=[b]",
+  stringstyle=\color{red},
+  identifierstyle=\color{black},
+}
+
 \geometry{a4paper, margin=1.5cm}
 
 

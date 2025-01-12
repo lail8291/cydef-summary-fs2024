@@ -21,6 +21,8 @@
             \includegraphics[scale=0.5]{resources/15-appendix-log4j.png}
         \end{center}
     \end{itemize}
+    \item XSRF crosssite Request Forgery \newline
+    
 \end{itemize}
 
 
@@ -110,3 +112,169 @@ An additional security measure where domains are hardcoded into browsers as HTTP
 \end{itemize}
 
 Would you like me to elaborate on any of these aspects or explain how to implement HSTS in different web servers?
+
+\subsubsection{XSRF}
+\textbf{Cross-Site Request Forgery (XSRF/CSRF)}
+XSRF is a web security vulnerability that enables attackers to induce users to perform unwanted actions on a web application where they're currently authenticated.
+
+\textbf{Attack Flow}
+\begin{itemize}
+    \item \textbf{Prerequisites:}
+        \begin{itemize}
+            \item Victim is authenticated to site A
+            \item Valid session exists (cookies/tokens)
+            \item Victim accesses malicious site B
+        \end{itemize}
+    
+    \item \textbf{Attack Execution:}
+        \begin{itemize}
+            \item Malicious site initiates request to site A
+            \item Browser includes authentication automatically
+            \item Request appears legitimate to server
+            \item Action executed without user consent
+        \end{itemize}
+\end{itemize}
+
+\textbf{Attack Vectors}
+\begin{itemize}
+    \item HTML Forms with auto-submission
+    \item Hidden form fields
+    \item Malicious image tags
+    \item XMLHttpRequest/Fetch calls
+    \item Clickjacking combinations
+\end{itemize}
+
+\textbf{Common Targets}
+\begin{itemize}
+    \item Financial transactions
+    \item Account modifications
+    \item Data alterations
+    \item State-changing operations
+    \item Administrative actions
+\end{itemize}
+
+\textbf{Protection Mechanisms}
+\begin{itemize}
+    \item \textbf{CSRF Tokens}
+        \begin{itemize}
+            \item Unique per-session identifiers
+            \item Required in state-changing requests
+            \item Server-side validation
+        \end{itemize}
+    
+    \item \textbf{SameSite Cookies}
+        \begin{itemize}
+            \item Strict: First-party only
+            \item Lax: Top-level navigation
+            \item None: All contexts (requires Secure)
+        \end{itemize}
+        
+    \item \textbf{Custom Headers}
+        \begin{itemize}
+            \item Required for sensitive operations
+            \item Cross-origin restrictions
+            \item Validation requirements
+        \end{itemize}
+\end{itemize}
+
+\textbf{Implementation Example}
+\begin{lstlisting}[language=html]
+<!-- CSRF Token in Form -->
+<form action="/transfer" method="POST">
+    <input type="hidden" name="csrf_token" 
+           value="random_token_here">
+    <input type="text" name="amount">
+    <button type="submit">Transfer</button>
+</form>
+\end{lstlisting}
+
+\includegraphics[width=\textwidth]{resources/08-xsrf.png}
+This image illustrates a CSRF (Cross-Site Request Forgery) attack targeting an e-banking system. Let me break it down:
+
+\textbf{Attack Flow}
+\begin{itemize}
+    \item \textbf{Initial State:}
+        \begin{itemize}
+            \item Victim is logged into E-Banking (has cookie "ALPHA")
+            \item Cookie serves as authentication token
+        \end{itemize}
+    
+    \item \textbf{Attack Process:}
+        \begin{itemize}
+            \item Victim visits malicious XSRF attack page
+            \item Page contains two attack variants:
+            \item Variant 1: Direct URL manipulation
+            \item Variant 2: JavaScript-based attack
+            \item Browser automatically sends ALPHA cookie with request
+        \end{itemize}
+
+    \item \textbf{Key Elements:}
+        \begin{itemize}
+            \item Blue lines: Legitimate banking session
+            \item Red lines: Malicious flow
+            \item "href=URL?zahlen...": Payment trigger URL
+            \item "JS (JavaScript)": Scripted attack method
+        \end{itemize}
+\end{itemize}
+
+\textbf{German Text Translation:}
+The text explains that the victim is logged into e-banking with an ALPHA cookie, and when they visit the XSRF page, it triggers a payment instruction. This only works if the browser sends the ALPHA cookie to the e-banking system when the request is initiated from the XSRF site (related to SameSite cookie settings).
+
+\textbf{Protection Notes:}
+This type of attack can be prevented by:
+\begin{itemize}
+    \item SameSite cookie attributes
+    \item CSRF tokens
+    \item Origin validation
+    \item Request verification
+\end{itemize}
+
+\subsubsection{XSRF DNS Attack}
+\textbf{XSRF-DNS Attack Overview}
+
+This is a more sophisticated variant of CSRF that exploits DNS rebinding to bypass same-origin policy protections.
+
+\textbf{Attack Process}
+\begin{itemize}
+    \item \textbf{Initial Setup:}
+        \begin{itemize}
+            \item Attacker controls malicious domain
+            \item Sets up DNS with very short TTL (Time To Live)
+            \item Initially points to attacker's server
+        \end{itemize}
+    
+    \item \textbf{Attack Flow:}
+        \begin{itemize}
+            \item Victim visits malicious site
+            \item DNS initially resolves to attacker's server
+            \item Malicious JavaScript loaded
+            \item DNS record changes to target's internal IP
+            \item Same JavaScript now executes against internal target
+        \end{itemize}
+\end{itemize}
+
+\textbf{Technical Components}
+\begin{itemize}
+    \item DNS configuration with short TTL
+    \item Multiple A records
+    \item JavaScript payload
+    \item Internal network targeting
+    \item DNS rebinding toolkit
+\end{itemize}
+
+\textbf{Protection Mechanisms}
+\begin{itemize}
+    \item Host header validation
+    \item DNS pinning
+    \item Internal DNS resolvers
+    \item Network segmentation
+    \item Application-layer validation
+    \item Proper CORS configuration
+\end{itemize}
+
+\textbf{Example Attack Scenario}
+\begin{lstlisting}[language=bash]
+# Attacker's DNS Configuration
+evil.com.    60    IN    A    attacker.com
+evil.com.    60    IN    A    internal.target
+\end{lstlisting}
